@@ -1,0 +1,177 @@
+/* Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Effet de pluie */
+.rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.rain-drop {
+    position: absolute;
+    width: 2px;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+    animation: rain linear infinite;
+}
+
+@keyframes rain {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(100vh); }
+}
+
+/* Conteneur principal */
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(90%, 400px);
+    height: auto;
+    max-height: 90vh;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: min(4vh, 30px);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: min(2vh, 15px);
+}
+
+/* Logo */
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: min(15vh, 80px);
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Titres */
+h1 {
+    font-size: min(4vh, 2rem);
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: min(3vh, 1.5rem);
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Liens et boutons */
+.links {
+    display: flex;
+    justify-content: center;
+    gap: min(3vw, 20px);
+    margin-top: min(2vh, 15px);
+}
+
+.button {
+    padding: min(2vh, 12px) min(4vw, 25px);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: min(2.5vh, 1rem);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    white-space: nowrap;
+}
+
+.button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Adaptations pour différentes tailles d'écran */
+@media (max-width: 480px) {
+    .container {
+        padding: min(3vh, 20px);
+        gap: min(1.5vh, 10px);
+    }
+
+    .logo {
+        height: min(12vh, 60px);
+    }
+
+    .button {
+        padding: min(1.5vh, 10px) min(3vw, 20px);
+    }
+}
+
+/* Support pour la réduction de mouvement */
+@media (prefers-reduced-motion: reduce) {
+    .button {
+        transition: none;
+    }
+    .button:hover {
+        transform: none;
+    }
+    .rain-drop {
+        animation: none;
+    }
+}
+
+/* Support pour les écrans très petits */
+@media (max-height: 400px) {
+    .container {
+        padding: min(2vh, 15px);
+        gap: min(1vh, 8px);
+    }
+    
+    .logo {
+        height: min(10vh, 40px);
+    }
+    
+    h1 {
+        font-size: min(3vh, 1.5rem);
+    }
+    
+    h2 {
+        font-size: min(2.5vh, 1.2rem);
+    }
+    
+    .button {
+        padding: min(1.2vh, 8px) min(2.5vw, 15px);
+        font-size: min(2vh, 0.9rem);
+    }
+} 
