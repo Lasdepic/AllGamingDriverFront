@@ -22,7 +22,7 @@
 
         if (isset($_SESSION['username'])) {
             echo "<p>Bienvenue, " . htmlspecialchars($_SESSION['username']) . "!</p>";
-            echo '<a href="dashboard.php" class="button">Tableau de bord</a>';
+            echo '<a href="dashboard.php" class="button">Connexion</a>';
             echo '<a href="logout.php" class="button">Déconnexion</a>';
         } else {
             echo '<a href="login.php" class="button">Connexion</a>';

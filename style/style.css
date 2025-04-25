@@ -170,11 +170,116 @@ h2 {
 }
 
 input::placeholder {
-    color: rgb(255, 255, 255); /* Remplacez 'gray' par la couleur de votre choix */
-    font-style: italic; /* Optionnel : pour un style supplémentaire */
+    color: rgb(255, 255, 255); 
+    font-style: italic; 
 }
 
 textarea::placeholder {
-    color: gray; /* Si vous utilisez des <textarea>, appliquez également */
+    color: gray; 
 }
 
+
+.transparent-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+
+.dropdown {
+    position: relative;
+    display:block;
+}
+
+/* Centrer la liste déroulante sous "Driver" */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 120%; /* Abaisse légèrement le menu */
+    left: 50%; /* Centre le menu horizontalement */
+    transform: translateX(-50%);
+    backdrop-filter: blur(8px);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 5px;
+    z-index: 1000;
+    min-width: 150px; /* Largeur minimale pour le menu */
+}
+
+.dropdown-menu li {
+    padding: 5px 20px;
+}
+
+.dropdown-menu a {
+    color: white;
+    font-size: 1em;
+    display: block;
+    
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+    display: block; 
+}
+
+/* Logout button */
+.logout-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #0b2ffd;
+}
+
+main {
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
