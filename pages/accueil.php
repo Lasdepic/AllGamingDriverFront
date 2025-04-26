@@ -30,28 +30,39 @@
         </nav>
     </header>
     <main>
-        <h1>Bienvenue sur All Gaming Driver</h1>
+    <h1>Bienvenue sur All Gaming Driver</h1>
+    <p><strong>Votre destination ultime pour tous vos téléchargements indispensables !</strong></p>
+
+    <div class="section">
         <p>
-    <strong>Votre destination ultime pour tous vos téléchargements indispensables !</strong>
-</p>
-<ul>
-    <li>
-        <strong>Téléchargez les pilotes</strong> des fabricants réputés comme <span class="highlight">NVIDIA, AMD, et Intel</span>, 
-        et optimisez les performances de votre matériel en toute simplicité.
-    </li>
-    <li>
-        <strong>Accédez aux logiciels de discussion</strong> les plus populaires tels que 
-        <span class="highlight">WhatsApp, Microsoft Teams, et Discord</span>, pour rester connecté à vos proches et collègues.
-    </li>
-    <li>
-        <strong>Explorez tous les launchers de jeux incontournables</strong> : 
-        <span class="highlight">Steam, Epic Games, Battle.net, Origin</span>, et bien plus encore, pour une expérience gaming optimale.
-    </li>
-</ul>
-<p>
-    Simplifiez vos téléchargements en un seul clic. <strong>All Gaming Driver</strong>, c'est votre plateforme centralisée qui répond à vos besoins numériques.
-</p>
-    </main>
+            <strong>Téléchargez les pilotes</strong> des fabricants réputés comme 
+            <span class="highlight">NVIDIA, AMD, et Intel</span>, 
+            et optimisez les performances de votre matériel en toute simplicité.
+        </p>
+    </div>
+
+    <div class="section">
+        <p>
+            <strong>Accédez aux logiciels de discussion</strong> les plus populaires tels que 
+            <span class="highlight">WhatsApp, Microsoft Teams, et Discord</span>, 
+            pour rester connecté à vos proches et collègues.
+        </p>
+    </div>
+
+    <div class="section">
+        <p>
+            <strong>Explorez tous les launchers de jeux incontournables</strong> : 
+            <span class="highlight">Steam, Epic Games, Battle.net, Origin</span>, 
+            et bien plus encore, pour une expérience gaming optimale.
+        </p>
+    </div>
+
+    <p>
+        Simplifiez vos téléchargements en un seul clic. <strong>All Gaming Driver</strong>, 
+        c'est votre plateforme centralisée qui répond à vos besoins numériques.
+    </p>
+</main>
+
 
     <script>
     const rainContainer = document.querySelector('.rain');
